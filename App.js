@@ -10,31 +10,33 @@ function HomeScreen({ navigation }) {
       <Text>Home Screen</Text>
       <View
         style={{
-          backgroundColor: 'red',
+          backgroundColor: 'black',
           flex: 1,
           // alignItems: 'center',
           // justifyContent: 'center'
         }}
       >
         <View style={{
-          backgroundColor: 'blue',
+          // backgroundColor: 'blue',
           alignItems: 'center',
           justifyContent: 'center'
         }}
         >
           <Text style={{}}> </Text>
-          <TextInput style={{ backgroundColor: 'white', width: '50%' }} ></TextInput>
-          <View style={{margin:5, flexDirection:'row'}}>
-            <Button 
-              title="Next"
-              onPress={() => navigation.navigate('DetailsScreen')}
-            />
-            <Button  color='red' title='Cancel' onPress={() => { console.log("Hello") }} />
+          <TextInput style={{ backgroundColor: 'white', width: '50%', height:'10%', color:'black' }} ></TextInput>
+          <View style={{ margin: 5, flexDirection: 'row', paddingTop: 20 }}>
+            <View style={{ marginRight: 20 }}>
+              <Button
+                title="Next"
+                onPress={() => navigation.navigate('DetailsScreen')}
+              />
+            </View>
+            <Button color='red' title='Cancel' onPress={() => { console.log("Hello") }} />
           </View>
 
         </View>
         <View style={{
-          backgroundColor: 'green',
+          // backgroundColor: 'green',
           alignItems: 'center',
           justifyContent: 'center',
           padding: 5,
@@ -45,19 +47,17 @@ function HomeScreen({ navigation }) {
             arr.map((index, indexNumber) => {
               return (
                 <>
-                  < Image source={{ uri: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80' }} style={{ height: 100, width: 100, margin: 8 }} />
+                  < Image source={{ uri: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80' }} style={{ height: 100, width: 120, margin: 15, marginTop: 40, borderColor: 'red', borderWidth: 2 }} />
                 </>
 
               )
             })
           }
-
         </View >
       </View>
     </View>
   );
 }
-
 function DetailsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
