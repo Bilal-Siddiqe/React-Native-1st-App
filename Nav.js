@@ -8,4 +8,4 @@ const Nav = (props) => {
     </View>
   )
 }
-export default Nav
+export default Nav;
